@@ -6,7 +6,15 @@
     "walls": "Muros de hormigón",
     "micro": "Microcemento",
     "pros": "Profesionales",
+    "realisations": "Proyectos",
     "contact": "Contacto"
+  },
+  "Realisations": {
+    "title": "Nuestros Proyectos",
+    "subtitle": "Una inmersión en nuestros proyectos excepcionales, donde la materia mineral se convierte en arte.",
+    "filter_all": "Todos",
+    "filter_res": "Residencial",
+    "filter_com": "Comercial"
   },
   "Index": {
     "title": "BÉTON CIRÉ ROCSTONES",
@@ -23,7 +31,7 @@
     "beton": {
       "title": "Béton Ciré RocStones",
       "desc": "Un acabado continuo que desafía los límites de la elegancia.",
-      "charme_title": "¿Qué hace que el béton ciré sea tan especial en los interiores modernos?",
+      "charme_title": "¿Qué hace que el béton ciré sea tan especial?",
       "charme_text": "El béton ciré es perfecto para cubrir tanto sus suelos como sus paredes. Aplicado a mano con llana hasta obtener una superficie continua —con o sin efectos, según sus gustos—, su bajo espesor lo convierte en el revestimiento ideal para reformas o nuevas construcciones. Este material duradero cuenta con una amplia paleta de colores y es compatible con calefacción por suelo radiante. Se utiliza notablemente como una alternativa muy atractiva al azulejo tradicional.",
       "avantages_title": "¿Cuáles son las ventajas del béton ciré?",
       "avantages_text": "Este material duradero cuenta con una amplia paleta de colores y es compatible con calefacción por suelo radiante. Se utiliza notablemente como una alternativa muy atractiva al azulejo tradicional."
@@ -33,9 +41,9 @@
       "intro_label": "Texturas Murales",
       "intro_title": "El carácter bruto del hormigón, la finura del diseño.",
       "desc": "Creación de texturas de hormigón en paredes interiores y fachadas para un look contemporáneo.",
-      "what_title": "¿QUÉ SON LOS MURS EN BÉTON ARCHITECTURAL?",
-      "what_text": "Los Murs en Béton Architectural representan un revestimiento de pared en hormigón decorativo, adaptado tanto para interior como para exterior. Rocstones le ofrece Muros de Hormigón con diferentes motivos y texturas, para dar a su hogar o local comercial un aspecto estético, moderno y arquitectónico.",
-      "why_title": "¿POR QUÉ ELEGIR LOS MURS EN BÉTON ARCHITECTURAL ROCSTONES?",
+      "what_title": "QU’EST-CE QUE LES MURS EN BÉTON ARCHITECTURAL ?",
+      "what_text": "Los Muros de Hormigón Arquitectónico representan un revestimiento de pared en hormigón decorativo, adaptado tanto para interior como para exterior. Rocstones le ofrece Muros de Hormigón con diferentes motivos y texturas, para dar a su hogar o local comercial un aspecto estético, moderno y arquitectónico.",
+      "why_title": "POURQUOI CHOISIR LES MURS EN BÉTON ARCHITECTURAL ROCSTONES ?",
       "why_durability": "Durabilidad",
       "why_durability_text": "Un revestimiento de pared en hormigón será resistente a los impactos y al paso del tiempo. Incluso después de varios años, sus paredes mantendrán el aspecto del primer día.",
       "why_aesthetic": "Estética moderna",
@@ -117,10 +125,52 @@
     "support_title": "Soporte Técnico Experto",
     "support_desc": "Asesoramiento sobre soportes, paletas RAL personalizadas y seguimiento de obra dedicado."
   },
+  "Contact": {
+    "title": "Contacte con nosotros",
+    "subtitle": "Hablemos de su proyecto. Nuestro equipo de expertos está a su disposición.",
+    "info_title": "Información",
+    "address": "Al Hoceima, Marruecos",
+    "hours": "Lun - Vie: 09:00 - 18:00",
+    "whatsapp": "WhatsApp Directo",
+    "form_name": "Nombre completo",
+    "form_email": "E-mail",
+    "form_phone": "Teléfono",
+    "form_message": "Su proyecto",
+    "form_button": "Enviar mensaje",
+    "social_title": "Siga nuestra actualidad"
+  },
+  "Footer": {
+    "desc": "Fabricante y aplicador líder de microcemento en Marruecos.",
+    "links_title": "Enlaces rápidos",
+    "zones_title": "Zonas de intervención",
+    "zones_list": "Casablanca, Rabat, Marrakech, Agadir, Tánger, Fez, Oujda...",
+    "rights": "© 2026 ROCSTONES MAROC. Todos los derechos reservados.",
+    "social_title": "Síguenos"
+  },
   "Common": {
     "renovation_title": "Renovación de Precisión",
     "renovation_subtitle": "Transformar sin demoler.",
     "renovation_desc": "Una experiencia única para renovar azulejos, muebles y zonas húmedas sin necesidad de obras pesadas.",
+    "ramadan_kareem": "Ramadan Mubarak",
     "mouse_scroll": "Scroll"
+  },
+"RealisationsPage": {
+  "title": "NUESTROS PROYECTOS",
+  "subtitle": "Una colección de proyectos donde la artesanía se encuentra con la arquitectura contemporánea.",
+  "project_location": "Ubicación",
+  "project_type": "Tipo de proyecto",
+  "view_details": "Ver proyecto",
+  "project_desc": "Proyecto excepcional realizado con los acabados minerales de RocStones.",
+  "cta_title": "¿Listo para transformar su espacio?",
+  "cta_button": "Iniciar un proyecto",
+  "projects": {
+    "p1": { "name": "Villa", "loc": "Marrakech / Amelkis", "type": "Residencial" },
+    "p2": { "name": "Apartamento", "loc": "Tánger", "type": "Residencial" },
+    "p3": { "name": "Gimnasio", "loc": "Rabat", "type": "Comercial" },
+    "p4": { "name": "Restaurante ORA", "loc": "Casablanca / Residencia Anfa Cliff", "type": "Comercial" },
+    "p5": { "name": "Villa", "loc": "Agadir", "type": "Residencial" },
+    "p6": { "name": "Boutique", "loc": "Casablanca", "type": "Comercial" },
+    "p7": { "name": "The Cliff Beauty Bar", "loc": "Casablanca", "type": "Comercial" }
   }
+}
 }

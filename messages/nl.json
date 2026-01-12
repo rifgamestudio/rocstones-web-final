@@ -6,7 +6,15 @@
     "walls": "Betonmuren",
     "micro": "Microcement",
     "pros": "Professionals",
+    "realisations": "Projecten",
     "contact": "Contact"
+  },
+  "Realisations": {
+    "title": "Onze Projecten",
+    "subtitle": "Een onderdompeling in onze uitzonderlijke projecten, waar minerale materie kunst wordt.",
+    "filter_all": "Alle",
+    "filter_res": "Residentieel",
+    "filter_com": "Commercieel"
   },
   "Index": {
     "title": "BÉTON CIRÉ ROCSTONES",
@@ -23,7 +31,7 @@
     "beton": {
       "title": "Béton Ciré RocStones",
       "desc": "Een naadloze afwerking die de grenzen van elegantie verlegt.",
-      "charme_title": "Wat maakt de charme van béton ciré?",
+      "charme_title": "Wat maakt de charme van béton ciré in moderne interieurs?",
       "charme_text": "Béton ciré is perfect voor het bekleden van zowel uw vloeren als uw wanden. Met de hand gespaand tot een doorlopend oppervlak — met of zonder effect, naar uw smaak —, maakt de geringe dikte het een uitstekende keuze voor renovaties of nieuwbouw. Dit duurzame materiaal heeft een breed kleurenpalet en is uitstekend compatibel met vloerverwarming. Het wordt veelal gebruikt als een hoogwaardig alternatief voor tegels.",
       "avantages_title": "Wat zijn de voordelen van béton ciré?",
       "avantages_text": "Dit duurzame materiaal heeft een breed kleurenpalet en is uitstekend compatibel met vloerverwarming. Het wordt vaak ingezet als een stijlvol alternatief voor traditioneel tegelwerk."
@@ -67,9 +75,9 @@
       "f_ant_d": "Ideaal voor badkamers of oppervlakken met een hoog sliprisico.",
       "proc_title": "APPLICATIEPROCES",
       "proc_desc": "Ambachtelijke expertise voor een technisch onberispelijk resultaat.",
-      "step_1_t": "Voorbereiding oppervlak",
+      "step_1_t": "Voorbereiding Oppervlak",
       "step_1_d": "Het is essentieel dat het oppervlak schoon, droog en perfect glad is.",
-      "step_2_t": "Aanbrengen van primer",
+      "step_2_t": "Aanbrengen Van Primer",
       "step_2_d": "Deze stap zorgt voor hechting. Een glasvezelnet wordt aangebracht voor flexibiliteit.",
       "step_3_t": "Microcementlagen",
       "step_3_d": "Aanbrengen van de afwerklagen om de gewenste textuur en kleur te verkrijgen.",
@@ -117,10 +125,52 @@
     "support_title": "Expert Ondersteuning",
     "support_desc": "Advies over ondergronden, gepersonaliseerde RAL-kleuren en toegewijde werfopvolging."
   },
+  "Contact": {
+    "title": "Contacteer ons",
+    "subtitle": "Laten we over uw project praten. Ons team van experts staat tot uw beschikking.",
+    "info_title": "Informatie",
+    "address": "Al Hoceima, Marokko",
+    "hours": "Ma - Vr: 09:00 - 18:00",
+    "whatsapp": "Directe WhatsApp",
+    "form_name": "Volledige naam",
+    "form_email": "E-mail",
+    "form_phone": "Telefoon",
+    "form_message": "Uw project",
+    "form_button": "Verstuur bericht",
+    "social_title": "Volg onze actualiteit"
+  },
+  "Footer": {
+    "desc": "Toonaangevende fabrikant en verwerker van béton ciré in Marokko.",
+    "links_title": "Snelkoppelingen",
+    "zones_title": "Werkgebieden",
+    "zones_list": "Casablanca, Rabat, Marrakech, Agadir, Tanger, Fès, Oujda...",
+    "rights": "© 2026 ROCSTONES MAROKKO. Alle rechten voorbehouden.",
+    "social_title": "Volg ons"
+  },
   "Common": {
     "renovation_title": "Precisierenovatie",
     "renovation_subtitle": "Transformeren zonder slopen.",
     "renovation_desc": "Unieke expertise voor het renoveren van tegels, meubels en natte ruimtes zonder zware verbouwingen.",
+    "ramadan_kareem": "Ramadan Mubarak",
     "mouse_scroll": "Scroll"
+  },
+"RealisationsPage": {
+  "title": "ONZE PROJECTEN",
+  "subtitle": "Een verzameling projecten waar vakmanschap en moderne architectuur samenkomen.",
+  "project_location": "Locatie",
+  "project_type": "Projecttype",
+  "view_details": "Bekijk project",
+  "project_desc": "Uitzonderlijk project gerealiseerd met de minerale afwerkingen van RocStones.",
+  "cta_title": "Klaar om uw ruimte te transformeren?",
+  "cta_button": "Project starten",
+  "projects": {
+    "p1": { "name": "Villa", "loc": "Marrakech / Amelkis", "type": "Residentieel" },
+    "p2": { "name": "Appartement", "loc": "Tanger", "type": "Residentieel" },
+    "p3": { "name": "Sportschool", "loc": "Rabat", "type": "Commercieel" },
+    "p4": { "name": "ORA Restaurant", "loc": "Casablanca / Anfa Cliff Residentie", "type": "Commercieel" },
+    "p5": { "name": "Villa", "loc": "Agadir", "type": "Residentieel" },
+    "p6": { "name": "Boutique", "loc": "Casablanca", "type": "Commercieel" },
+    "p7": { "name": "The Cliff Beauty Bar", "loc": "Casablanca", "type": "Commercieel" }
   }
+}
 }

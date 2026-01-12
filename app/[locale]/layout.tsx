@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Header from "../../components/Header";
+import Footer from "../../components/Footer"; // Importamos el nuevo Footer
 import { Inter, Baskervville } from 'next/font/google';
 import { ThemeProvider } from "next-themes";
 
@@ -31,7 +32,10 @@ export default async function LocaleLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <NextIntlClientProvider messages={messages}>
             <Header />
+            {/* El contenido de cada página */}
             {children}
+            {/* El pie de página global */}
+            <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

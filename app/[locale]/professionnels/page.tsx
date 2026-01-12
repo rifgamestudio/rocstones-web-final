@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion, Variants } from 'framer-motion';
+import Link from 'next/link'; // Importamos Link para la navegación
 
 export default function ProfessionalsPage() {
   const t = useTranslations('Professionals');
@@ -21,7 +22,7 @@ export default function ProfessionalsPage() {
       
       {/* 1. HERO SECTION */}
       <section className="relative h-[80vh] w-full overflow-hidden bg-background">
-        <motion.img initial={{ scale: 1.1 }} animate={{ scale: 1 }} transition={{ duration: 2 }} src="/img/bc1.jpg" alt="Professional Spaces" className="absolute inset-0 w-full h-full object-cover grayscale-[0.3]" />
+        <motion.img initial={{ scale: 1.1 }} animate={{ scale: 1 }} transition={{ duration: 2 }} src="/img/profondo.jpg" alt="Professional Spaces" className="absolute inset-0 w-full h-full object-cover grayscale-[0.3]" />
         <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-background via-background/10 to-transparent z-10" />
         <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-background via-background/40 to-transparent z-10" />
         <div className="relative z-20 h-full flex items-center justify-center text-center">
@@ -136,12 +137,19 @@ export default function ProfessionalsPage() {
         </div>
       </section>
 
+      {/* SECCIÓN FINAL CON BOTÓN DE CONTACTO FUNCIONAL */}
       <section className="py-24 px-6 max-w-4xl mx-auto text-center">
         <motion.div variants={refinedFade} initial="initial" whileInView="whileInView" className="space-y-8">
           <h3 className="text-3xl md:text-5xl font-serif italic">{t('support_title')}</h3>
           <p className="text-gray-500 font-light leading-relaxed text-lg italic">{t('support_desc')}</p>
           <div className="pt-10">
-            <button className="bg-foreground text-background px-12 py-5 text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-[#C4A484] hover:text-white transition-all duration-500 rounded-full">Contact Technique</button>
+            {/* Cambiado button por Link para que sea funcional */}
+            <Link 
+              href="/contact" 
+              className="inline-block bg-foreground text-background px-12 py-5 text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-[#C4A484] hover:text-white transition-all duration-500 rounded-full shadow-lg"
+            >
+              Contact
+            </Link>
           </div>
         </motion.div>
       </section>

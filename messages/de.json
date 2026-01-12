@@ -6,7 +6,15 @@
     "walls": "Betonwände",
     "micro": "Mikrozement",
     "pros": "Profis",
+    "realisations": "Referenzen",    
     "contact": "Kontakt"
+  },
+  "Realisations": {
+    "title": "Unsere Referenzen",
+    "subtitle": "Ein Eintauchen in unsere außergewöhnlichen Projekte, bei denen mineralische Materie zu Kunst wird.",
+    "filter_all": "Alle",
+    "filter_res": "Wohnbereich",
+    "filter_com": "Gewerbe"
   },
   "Index": {
     "title": "BÉTON CIRÉ ROCSTONES",
@@ -59,7 +67,7 @@
       "finishes_desc": "RocStones Mikrozement passt sich dank seiner vielfältigen Oberflächen jedem Stil an.",
       "f_mat": "Matt",
       "f_mat_d": "Verleiht Ihrer Beschichtung das natürlichste und organischste Aussehen.",
-      "f_sat": "Satiné",
+      "f_sat": "Seidenmatt",
       "f_sat_d": "Das beliebteste Finish, das eine moderne und subtile Note verleiht.",
       "f_pol": "Poliert",
       "f_pol_d": "Ermöglicht einen Marmoreffekt und bringt die Farben maximal zur Geltung.",
@@ -93,21 +101,21 @@
     "collab_text_1": "Béton Ciré ist in den letzten Jahren stark gewachsen und ein wichtiger Markt. Dank seiner Ästhetik findet es Einzug in prestigeträchtige Objekte.",
     "collab_text_2": "Wir begleiten Designexperten bei der Realisierung komplexer mineralischer Oberflächen mit hoher Leistung.",
     "why_title": "WARUM ROCSTONES?",
-    "why_subtitle": "RocStones ist der exklusive Hersteller und Exporteur in Marokko.",
-    "why_text_1": "Unsere Expertise garantiert perfekte Kundenzufriedenheit. Wir suchen Partner für diesen wachsenden Markt.",
+    "why_subtitle": "RocStones ist der exklusive Hersteller und Exporteur von Béton Ciré in Marokko.",
+    "why_text_1": "Unsere Expertise garantiert perfekte Kundenzufriedenheit. Wir glauben an die Zukunft von Béton Ciré und suchen Partner für diese Mission.",
     "partner_title": "MEHR ALS EIN LIEFERANT, EIN ECHTER PARTNER",
     "partner_list_1": "RocStones verkauft nicht nur sein Produkt, sondern bietet echte Unterstützung für eine perfekte Anwendung.",
-    "partner_list_2": "Detailliertes Handbuch mit praktischem Ansatz für alle Baustellensituationen.",
-    "partner_list_3": "Schulung zur Vermeidung technischer Probleme. Exklusives Anti-Riss-System.",
+    "partner_list_2": "Wir liefern ein detailliertes RocStones-Handbuch mit praktischem Ansatz für alle Baustellensituationen.",
+    "partner_list_3": "Zudem schulen und beraten wir unsere Verarbeiter zur Vermeidung technischer Probleme. Wir nutzen ein exklusives Anti-Riss-System.",
     "colors_title": "FARBEN & FINISHES",
-    "colors_text": "Breite Auswahl an Farben und maßgeschneiderte RAL-Töne.",
-    "finishes_list": "Rocstones fine, Rocstones structured, Rocstones structured+, Rocstones façade.",
+    "colors_text": "Breite Auswahl an sorgfältig gewählten Farben. Maßgeschneiderte RAL-Farbtöne sind ebenfalls möglich.",
+    "finishes_list": "Fine, Structured, Structured+, Façade.",
     "distribution_title": "VERTRIEB & STANDORTE",
-    "distribution_text": "Service in ganz Marokko: Casablanca, Rabat, Marrakesch, Agadir, Tanger, Fès, Oujda...",
+    "distribution_text": "Vertrieb und Anwendung in ganz Marokko: Casablanca, Rabat, Marrakesch, Agadir, Tanger, Fès, Oujda...",
     "advantages_title": "ROCSTONES VORTEILE",
     "adv_1": "Gebrauchsfertig: Vormischt, einfache Anwendung.",
     "adv_2": "Null Risiko: Wasserbasiert, lösungsmittelfrei, niedrige VOC-Emissionen.",
-    "adv_3": "Schulung inklusive: Technische Unterstützung für unsere Kunden.",
+    "adv_3": "Schulung inklusive: Technische Kurse für unsere Kunden.",
     "adv_4": "Wirtschaftlich: Reste können bis zu einem Jahr gelagert und wiederverwendet werden.",
     "sectors_title": "Geschäftsbereiche",
     "gym": "Fitnessstudios",
@@ -115,12 +123,54 @@
     "office": "Büros",
     "retail": "Boutiquen",
     "support_title": "Technischer Support",
-    "support_desc": "Beratung und Baustellenüberwachung."
+    "support_desc": "Beratung zu Untergründen, maßgeschneiderte RAL-Farben und Baustellenüberwachung."
+  },
+  "Contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Sprechen wir über Ihr Projekt. Unser Expertenteam steht Ihnen zur Verfügung.",
+    "info_title": "Informationen",
+    "address": "Al Hoceima, Marokko",
+    "hours": "Mo - Fr: 09:00 - 18:00",
+    "whatsapp": "Direkt-WhatsApp",
+    "form_name": "Vollständiger Name",
+    "form_email": "E-mail",
+    "form_phone": "Telefon",
+    "form_message": "Ihr Projekt",
+    "form_button": "Nachricht senden",
+    "social_title": "Folgen Sie uns"
+  },
+  "Footer": {
+    "desc": "Führender Hersteller und Verarbeiter von Béton Ciré in Marokko.",
+    "links_title": "Schnellzugriff",
+    "zones_title": "Einsatzgebiete",
+    "zones_list": "Casablanca, Rabat, Marrakesch, Agadir, Tanger, Fès, Oujda...",
+    "rights": "© 2026 ROCSTONES MAROKKO. Alle Rechte vorbehalten.",
+    "social_title": "Folgen Sie uns"
   },
   "Common": {
     "renovation_title": "Präzisionsrenovierung",
     "renovation_subtitle": "Verwandeln ohne Abriss.",
-    "renovation_desc": "Einzigartige Expertise zur Renovierung von Fliesen, Möbeln und Nassbereichen ohne schwere Bauarbeiten.",
+    "renovation_desc": "Einzigartige Expertise zur Renovierung von Fliesen und Möbeln ohne schwere Bauarbeiten.",
+    "ramadan_kareem": "Ramadan Mubarak",
     "mouse_scroll": "Scrollen"
+  },
+"RealisationsPage": {
+  "title": "UNSERE REFERENZEN",
+  "subtitle": "Eine Sammlung von Projekten, bei denen Handwerkskunst auf zeitgenössische Architektur trifft.",
+  "project_location": "Standort",
+  "project_type": "Projekttyp",
+  "view_details": "Projekt ansehen",
+  "project_desc": "Außergewöhnliches Projekt, realisiert mit den mineralischen Oberflächen von RocStones.",
+  "cta_title": "Bereit, Ihren Raum zu verwandeln?",
+  "cta_button": "Projekt starten",
+  "projects": {
+    "p1": { "name": "Villa", "loc": "Marrakesch / Amelkis", "type": "Wohnbereich" },
+    "p2": { "name": "Apartment", "loc": "Tanger", "type": "Wohnbereich" },
+    "p3": { "name": "Fitnessstudio", "loc": "Rabat", "type": "Gewerbe" },
+    "p4": { "name": "ORA Restaurant", "loc": "Casablanca / Anfa Cliff Residenz", "type": "Gewerbe" },
+    "p5": { "name": "Villa", "loc": "Agadir", "type": "Wohnbereich" },
+    "p6": { "name": "Boutique", "loc": "Casablanca", "type": "Gewerbe" },
+    "p7": { "name": "The Cliff Beauty Bar", "loc": "Casablanca", "type": "Gewerbe" }
   }
+}
 }

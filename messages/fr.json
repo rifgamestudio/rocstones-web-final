@@ -6,7 +6,15 @@
     "walls": "Murs en béton",
     "micro": "MicroCiment",
     "pros": "Professionnels",
+    "realisations": "Realisations",
     "contact": "Contact"
+  },
+  "Realisations": {
+    "title": "Nos Projets",
+    "subtitle": "Une immersion dans nos projets d'exception, où la matière minérale devient art.",
+    "filter_all": "Tous",
+    "filter_res": "Résidentiel",
+    "filter_com": "Commercial"
   },
   "Index": {
     "title": "BÉTON CIRÉ ROCSTONES",
@@ -24,9 +32,9 @@
       "title": "Béton Ciré RocStones",
       "desc": "Une finition continue qui repousse les limites de l'élégance.",
       "charme_title": "Qu’est-ce qui fait le charme du béton ciré ?",
-      "charme_text": "Le béton ciré est parfait pour couvrir à la fois vos sols et vos murs. Taloché à la main jusqu’à obtenir une surface continue — avec ou sans effet, selon vos goûts —, sa faible épaisseur en fait un revêtement de choix pour les rénovations ou lors d’une nouvelle construction. Ce matériau durable comporte une large palette de couleur et est compatible avec un chauffage au sol. Il est notamment utilisé comme une intéressante alternative au carrelage.",
+      "charme_text": "Le béton ciré est parfait pour couvrir à la fois vos sols et vos murs. Taloché à la main jusqu’à obtenir une surface continue — avec ou sans effet, selon vos goûts —, sa faible épaisseur en fait un revêtement de choix pour les rénovations ou lors d’une nouvelle construction. Ce matériau durable comporte une large palette de couleur et est compatible avec un chauffage au sol. Il est notamment utilisé como une intéressante alternative au carrelage.",
       "avantages_title": "Quels sont les avantages du béton ciré ?",
-      "avantages_text": "Ce matériau durable comporte une large palette de couleur et est compatible avec un chauffage au sol. Il est notamment utilisé comme une intéressante alternative au carrelage."
+      "avantages_text": "Ce matériau durable comporte une large palette de couleur et est compatible avec un chauffage au sol. Il est notamment utilisé como une intéressante alternative au carrelage."
     },
     "walls": {
       "title": "Murs en Béton Architectural",
@@ -94,10 +102,10 @@
     "collab_text_2": "Nous accompagnons les experts du design dans la réalisation de surfaces minérales complexes, alliant haute performance technique et esthétique sur mesure.",
     "why_title": "POURQUOI ROCSTONES ?",
     "why_subtitle": "RocStones est le fabricant et exportateur exclusif de béton ciré au Maroc.",
-    "why_text_1": "Notre expertise dans la fabrication et l'application du béton ciré nous permet de toujours garantir une satisfaction parfaite de nos clients. Nous sommes convaincus par l’avenir du béton ciré et cherchons des partenaires pour nous accompagner dans cette mission.",
+    "why_text_1": "Notre expertise dans la fabrication et l'application du béton ciré nous permet de toujours garantir une satisfaction parfaite de nos clientes. Nous sommes convaincus par l’avenir du béton ciré et cherchons des partenaires pour nous accompagner dans cette mission.",
     "partner_title": "PLUS QU’UN FOURNISSEUR, UN RÉEL PARTENAIRE",
     "partner_list_1": "RocStones ne commercialise pas uniquement son produit, mais offre aussi un réel accompagnement pour assurer une satisfaction client optimale.",
-    "partner_list_2": "Nous livrons un manuel d’application RocStones détaillé, avec une approche pratique, permettant de s’adapter à toutes les circonstances de chantier.",
+    "partner_list_2": "Nous livrons un manuel d’application RocStones détaillé, avec une approche práctica, permettant de s’adapter à toutes les circonstances de chantier.",
     "partner_list_3": "Nous formons et conseillons nos applicateurs pour éviter les problèmes techniques. Nous appliquons un système exclusif antifissuration.",
     "colors_title": "DIFFÉRENTES COULEURS ET FINITIONS",
     "colors_text": "Nous disposons d'une large gamme de couleurs minutieusement choisies. Vous avez la possibilité de créer des couleurs personnalisées via la carte RAL.",
@@ -117,10 +125,52 @@
     "support_title": "Support Technique Expert",
     "support_desc": "Conseils sur supports, nuanciers RAL personnalisés et suivi de chantier dédié."
   },
+  "Contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Parlons de votre projet. Notre équipe d'experts est à votre disposition.",
+    "info_title": "Informations",
+    "address": "Al Hoceima, Maroc",
+    "hours": "Lun - Ven: 09:00 - 18:00",
+    "whatsapp": "WhatsApp Direct",
+    "form_name": "Nom complet",
+    "form_email": "E-mail",
+    "form_phone": "Téléphone",
+    "form_message": "Votre projet",
+    "form_button": "Envoyer le message",
+    "social_title": "Suivez notre actualité"
+  },
+  "Footer": {
+    "desc": "Fabricant et applicateur leader de béton ciré au Maroc.",
+    "links_title": "Liens rapides",
+    "zones_title": "Zones d'intervention",
+    "zones_list": "Casablanca, Rabat, Marrakech, Agadir, Tanger, Fès, Oujda...",
+    "rights": "© 2026 ROCSTONES MAROC. Tous droits réservés.",
+    "social_title": "Suivez-nous"
+  },
   "Common": {
     "renovation_title": "Rénovation de Précision",
     "renovation_subtitle": "Transformer sans démolir.",
     "renovation_desc": "Une expertise unique pour rénover carrelages, meubles et zones humides sans travaux lourds.",
+    "ramadan_kareem": "Ramadan Mubarak",
     "mouse_scroll": "Scroll"
+  },
+  "RealisationsPage": {
+    "title": "NOS RÉALISATIONS",
+    "subtitle": "Une collection de projets où l'artisanat rencontre l'architecture contemporaine.",
+    "project_location": "Localisation",
+    "project_type": "Type de projet",
+    "view_details": "Voir le projet",
+    "project_desc": "Projet d'exception réalisé avec les finitions minérales RocStones.",
+    "cta_title": "Prêt à transformer votre espace ?",
+    "cta_button": "Commencer un projet",
+    "projects": {
+      "p1": { "name": "Villa", "loc": "Marrakech / Amelkis", "type": "Résidentiel" },
+      "p2": { "name": "Apartement", "loc": "Tanger", "type": "Résidentiel" },
+      "p3": { "name": "Salle de Sport", "loc": "Rabat", "type": "Commercial" },
+      "p4": { "name": "ORA Restaurant", "loc": "Casablanca / Résidence Anfa Cliff", "type": "Commercial" },
+      "p5": { "name": "Villa", "loc": "Agadir", "type": "Résidentiel" },
+      "p6": { "name": "Boutique", "loc": "Casablanca", "type": "Commercial" },
+      "p7": { "name": "The Cliff Beauty Bar", "loc": "Casablanca", "type": "Commercial" }
+    }
   }
 }

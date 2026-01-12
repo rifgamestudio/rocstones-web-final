@@ -110,7 +110,7 @@ export default function BetonCirePage() {
         </div>
       </section>
 
-      {/* 4. BLOQUE INFORMATIVO (MÁS COMPACTO) */}
+      {/* 4. BLOQUE INFORMATIVO (BOTÓN ELIMINADO) */}
       <section className="py-16 px-6 bg-foreground/[0.02] border-y border-foreground/5">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
           <div className="space-y-4">
@@ -121,9 +121,7 @@ export default function BetonCirePage() {
           <div className="space-y-4 md:pt-8">
             <h3 className="text-2xl md:text-3xl font-serif italic">{t('avantages_title')}</h3>
             <p className="text-gray-500 dark:text-gray-400 font-light leading-relaxed text-base">{t('avantages_text')}</p>
-            <button className="bg-[#C4A484] text-white px-8 py-3 text-[9px] uppercase tracking-[0.3em] font-bold hover:bg-black transition-all rounded-full shadow-md">
-              Rencontrons-nous
-            </button>
+            {/* El botón ha sido eliminado para limpiar el diseño visual */}
           </div>
         </div>
       </section>
@@ -157,7 +155,7 @@ export default function BetonCirePage() {
             <span className="text-[9px] uppercase tracking-[0.5em] text-[#C4A484] font-bold">{tCommon('renovation_title')}</span>
             <div className="w-8 h-[1px] bg-[#C4A484]/30" />
           </div>
-          <h2 className="text-3xl md:text-5xl font-serif italic">{tCommon('renovation_subtitle')}</h2>
+          <h2 className="text-3xl md:text-5xl font-serif italic drop-shadow-sm">{tCommon('renovation_subtitle')}</h2>
           <p className="text-gray-400 dark:text-gray-500 font-light italic text-base leading-relaxed">
             {tCommon('renovation_desc')}
           </p>

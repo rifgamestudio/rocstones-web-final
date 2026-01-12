@@ -48,8 +48,9 @@ export default function Header() {
   const navLinks = [
     { name: t('home'), href: '/' },
     { name: t('services'), href: '#services' },
-    { name: t('pros'), href: '/professionnels' }, // URL CORREGIDA AQUÍ
-    { name: t('contact'), href: '#contact' },
+    { name: t('realisations'), href: '/realisations' }, // AÑADIDO A LA ESTRUCTURA
+    { name: t('pros'), href: '/professionnels' }, 
+    { name: t('contact'), href: '/contact' }, // URL CORREGIDA DE #contact A /contact
   ];
 
   const menuVariants: Variants = {
@@ -143,11 +144,17 @@ export default function Header() {
               </AnimatePresence>
             </div>
 
+            {/* ENLACE RÉALISATIONS AÑADIDO */}
+            <Link href="/realisations" className="hover:text-black dark:hover:text-white transition-all relative group text-center">
+              {t('realisations')}
+              <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-black dark:bg-white transition-all group-hover:w-full" />
+            </Link>
+
             <Link href="/professionnels" className="hover:text-black dark:hover:text-white transition-all relative group text-center">
               {t('pros')}
               <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-black dark:bg-white transition-all group-hover:w-full" />
             </Link>
-            <Link href="#contact" className="hover:text-black dark:hover:text-white transition-all relative group text-center">
+            <Link href="/contact" className="hover:text-black dark:hover:text-white transition-all relative group text-center">
               {t('contact')}
               <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-black dark:bg-white transition-all group-hover:w-full" />
             </Link>
@@ -162,11 +169,7 @@ export default function Header() {
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors duration-300"
               aria-label="Cambiar tema"
             >
-              <motion.div
-                initial={false}
-                animate={{ rotate: theme === 'dark' ? 180 : 0 }}
-                transition={{ duration: 0.5, ease: "backOut" }}
-              >
+              <motion.div initial={false} animate={{ rotate: theme === 'dark' ? 180 : 0 }}>
                 {theme === 'dark' ? (
                   <Sun size={18} className="text-yellow-400" />
                 ) : (
@@ -255,11 +258,16 @@ export default function Header() {
                 </AnimatePresence>
               </motion.div>
 
+              {/* RÉALISATIONS MÓVIL */}
               <motion.div variants={linkVariants} custom={2}>
+                <Link href="/realisations" onClick={() => setIsOpen(false)} className="text-4xl font-serif italic text-black dark:text-white">{t('realisations')}</Link>
+              </motion.div>
+
+              <motion.div variants={linkVariants} custom={3}>
                 <Link href="/professionnels" onClick={() => setIsOpen(false)} className="text-4xl font-serif italic text-black dark:text-white">{t('pros')}</Link>
               </motion.div>
-              <motion.div variants={linkVariants} custom={3}>
-                <Link href="#contact" onClick={() => setIsOpen(false)} className="text-4xl font-serif italic text-black dark:text-white">{t('contact')}</Link>
+              <motion.div variants={linkVariants} custom={4}>
+                <Link href="/contact" onClick={() => setIsOpen(false)} className="text-4xl font-serif italic text-black dark:text-white">{t('contact')}</Link>
               </motion.div>
             </nav>
 

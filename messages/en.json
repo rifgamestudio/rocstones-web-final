@@ -6,10 +6,18 @@
     "walls": "Concrete walls",
     "micro": "MicroCement",
     "pros": "Professionals",
+    "realisations": "Projects",
     "contact": "Contact"
   },
+  "Realisations": {
+    "title": "Our Projects",
+    "subtitle": "An immersion into our exceptional projects, where mineral matter becomes art.",
+    "filter_all": "All",
+    "filter_res": "Residential",
+    "filter_com": "Commercial"
+  },
   "Index": {
-    "title": "BÉTON CIRÉ ROCSTONES",
+    "title": "ROCSTONES BÉTON CIRÉ",
     "description": "The art of mineral application for your exceptional projects.",
     "cta": "Book an appointment"
   },
@@ -21,10 +29,10 @@
   "Expertise": {
     "title": "Our Application Specialties",
     "beton": {
-      "title": "Béton Ciré RocStones",
+      "title": "RocStones Béton Ciré",
       "desc": "A seamless finish that pushes the boundaries of elegance.",
-      "charme_title": "What makes the charm of waxed concrete?",
-      "charme_text": "Waxed concrete is perfect for covering both your floors and your walls. Hand-trowelled to obtain a continuous surface — with or without effects, according to your tastes —, its thinness makes it a choice covering for renovations or new constructions. This durable material features a wide color palette and is compatible with underfloor heating. It is notably used as an interesting alternative to tiling.",
+      "charme_title": "What makes the charm of waxed concrete in modern interiors?",
+      "charme_text": "Béton ciré is perfect for covering both your floors and your walls. Hand-trowelled until a continuous surface is obtained — with or without effects, according to your tastes —, its thinness makes it a choice covering for renovations or new constructions. This durable material features a wide color palette and is compatible with underfloor heating. It is notably used as an interesting alternative to tiling.",
       "avantages_title": "What are the advantages of waxed concrete?",
       "avantages_text": "This durable material features a wide color palette and is compatible with underfloor heating. It is notably used as an interesting alternative to tiling."
     },
@@ -33,9 +41,9 @@
       "intro_label": "Wall Textures",
       "intro_title": "The raw character of concrete, the finesse of design.",
       "desc": "Creating concrete textures on interior walls and facades for a contemporary look.",
-      "what_title": "WHAT ARE CONCRETE WALLS?",
-      "what_text": "Concrete Walls represent a decorative concrete wall covering, perfectly suited for both interior and exterior use. Rocstones offers Concrete Walls with various patterns and textures to give your home or commercial premises an aesthetic, modern, and architectural look.",
-      "why_title": "WHY CHOOSE ROCSTONES CONCRETE WALLS?",
+      "what_title": "WHAT ARE ARCHITECTURAL CONCRETE WALLS?",
+      "what_text": "Architectural Concrete Walls represent a decorative concrete wall covering, perfectly suited for both interior and exterior use. Rocstones offers Concrete Walls with various patterns and textures to give your home or commercial premises an aesthetic, modern, and architectural look.",
+      "why_title": "WHY CHOOSE ROCSTONES ARCHITECTURAL CONCRETE WALLS?",
       "why_durability": "Durability",
       "why_durability_text": "A concrete wall covering will be resistant to impacts and the wear and tear of time. Even after several years, your walls will retain their original appearance.",
       "why_aesthetic": "Modern Aesthetics",
@@ -70,11 +78,11 @@
       "step_1_t": "Surface Preparation",
       "step_1_d": "Ensuring a clean, dry, and perfectly smooth surface.",
       "step_2_t": "Primer Application",
-      "step_2_d": "Ensures bonding. Fiberglass mesh is applied for flexibility.",
+      "step_2_d": "Ensuring bonding. A fiberglass mesh is also applied for flexibility.",
       "step_3_t": "Micro-cement Layers",
       "step_3_d": "Applying finishing layers to achieve the desired texture and color.",
       "step_4_t": "Surface Sealing",
-      "step_4_d": "Two coats of treated polyurethane for waterproofing and protection."
+      "step_4_d": "Two coats of treated polyurethane are applied to guarantee waterproofing and protection."
     }
   },
   "WhyBeton": {
@@ -91,19 +99,19 @@
     "collab_label": "RocStones Morocco",
     "collab_title": "SEIZE THE OPPORTUNITY TO COLLABORATE WITH US",
     "collab_text_1": "Waxed concrete has seen strong growth in recent years, becoming a key market. Thanks to its aesthetic appeal, it is now integrated into the most prestigious homes and establishments.",
-    "collab_text_2": "We accompany design experts in creating complex mineral surfaces, combining performance and aesthetics.",
+    "collab_text_2": "We accompany design experts in creating complex mineral surfaces, combining high performance technical and bespoke aesthetics.",
     "why_title": "WHY ROCSTONES?",
-    "why_subtitle": "RocStones is the exclusive manufacturer and exporter in Morocco.",
+    "why_subtitle": "RocStones is the exclusive manufacturer and exporter of waxed concrete in Morocco.",
     "why_text_1": "Our expertise in the manufacturing and application of waxed concrete allows us to always guarantee perfect customer satisfaction. We are convinced of the future of waxed concrete and seek partners to join us in this mission.",
     "partner_title": "MORE THAN A SUPPLIER, A REAL PARTNER",
     "partner_list_1": "RocStones doesn't just sell its product, but also offers real support to ensure optimal customer satisfaction.",
-    "partner_list_2": "We provide a detailed manual with a practical approach to adapt to any site condition.",
-    "partner_list_3": "We train and advise our applicators to avoid technical problems. We apply an exclusive anti-cracking system.",
+    "partner_list_2": "Upon the first order, we also deliver the RocStones application manual. A detailed manual with a practical approach.",
+    "partner_list_3": "Furthermore, we train and advise our applicators to avoid technical problems. We apply an exclusive anti-cracking system.",
     "colors_title": "DIFFERENT COLORS & FINISHES",
     "colors_text": "We have a wide range of carefully selected colors. Custom RAL colors are also available.",
     "finishes_list": "Rocstones fine, Rocstones structured, Rocstones structured+, Rocstones façade.",
     "distribution_title": "POINTS OF SALE & DISTRIBUTION",
-    "distribution_text": "Distribution and installation throughout Morocco: Casablanca, Rabat, Marrakech, Tangier...",
+    "distribution_text": "Distribution and installation throughout Morocco: Casablanca, Rabat, Marrakech, Agadir, Tangier...",
     "advantages_title": "ROCSTONES ADVANTAGES",
     "adv_1": "Ready to use: Pre-mixed, easier and cleaner to apply.",
     "adv_2": "Zero risk: Water-based, solvent-free, low VOC emissions.",
@@ -117,10 +125,52 @@
     "support_title": "Expert Technical Support",
     "support_desc": "Substrate advice, custom RAL colors, and dedicated site monitoring."
   },
+  "Contact": {
+    "title": "Contact Us",
+    "subtitle": "Let's talk about your project. Our team of experts is at your disposal.",
+    "info_title": "Information",
+    "address": "Al Hoceima, Morocco",
+    "hours": "Mon - Fri: 09:00 - 18:00",
+    "whatsapp": "Direct WhatsApp",
+    "form_name": "Full name",
+    "form_email": "Email",
+    "form_phone": "Phone",
+    "form_message": "Your project",
+    "form_button": "Send message",
+    "social_title": "Follow our news"
+  },
+  "Footer": {
+    "desc": "Leading manufacturer and applicator of waxed concrete in Morocco.",
+    "links_title": "Quick Links",
+    "zones_title": "Service Areas",
+    "zones_list": "Casablanca, Rabat, Marrakech, Agadir, Tangier, Fes, Oujda...",
+    "rights": "© 2026 ROCSTONES MAROC. All rights reserved.",
+    "social_title": "Follow us"
+  },
   "Common": {
     "renovation_title": "Precision Renovation",
     "renovation_subtitle": "Transform without demolishing.",
-    "renovation_desc": "A unique expertise to renovate tiles, furniture, and wet areas without heavy work.",
+    "renovation_desc": "A unique expertise to renovate tiles, furniture, and wet areas without heavy construction work.",
+    "ramadan_kareem": "Ramadan Mubarak",
     "mouse_scroll": "Scroll"
+  },
+"RealisationsPage": {
+  "title": "OUR PROJECTS",
+  "subtitle": "A collection of projects where craftsmanship meets contemporary architecture.",
+  "project_location": "Location",
+  "project_type": "Project type",
+  "view_details": "View project",
+  "project_desc": "Exceptional project realized with RocStones mineral finishes.",
+  "cta_title": "Ready to transform your space?",
+  "cta_button": "Start a project",
+  "projects": {
+    "p1": { "name": "Villa", "loc": "Marrakech / Amelkis", "type": "Residential" },
+    "p2": { "name": "Apartment", "loc": "Tangier", "type": "Residential" },
+    "p3": { "name": "Gym", "loc": "Rabat", "type": "Commercial" },
+    "p4": { "name": "ORA Restaurant", "loc": "Casablanca / Anfa Cliff Residence", "type": "Commercial" },
+    "p5": { "name": "Villa", "loc": "Agadir", "type": "Residential" },
+    "p6": { "name": "Boutique", "loc": "Casablanca", "type": "Commercial" },
+    "p7": { "name": "The Cliff Beauty Bar", "loc": "Casablanca", "type": "Commercial" }
   }
+}
 }
