@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  /* Registramos la fuente y los colores dinámicos en el tema de Tailwind */
+  --font-serif: var(--font-serif);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+}
+
+/* Colores cuando el modo oscuro está activo */
+.dark {
+  --background: #121212;
+  --foreground: #f5f5f5;
+}
+
+body {
+  /* Usamos las variables para que cambien solas */
+  background-color: var(--background);
+  color: var(--foreground);
+  /* Transición de medio segundo para que sea elegante */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Clase manual para la fuente Serif */
+.font-serif {
+  font-family: var(--font-serif), serif !important;
+}
+
+/* Ajuste de sombras para el modo oscuro */
+.dark .shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
