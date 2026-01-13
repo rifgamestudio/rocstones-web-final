@@ -2,31 +2,40 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import Image from 'next/image'; // Importación necesaria para el rendimiento
 
 export default function HomePage() {
   const tIntro = useTranslations('Intro');
   const tExpertise = useTranslations('Expertise');
-  const tAlt = useTranslations('ImagesAlt'); // Inyectamos la traducción para SEO
+  const tAlt = useTranslations('ImagesAlt');
 
   return (
     <main className="flex flex-col w-full bg-background text-foreground transition-colors duration-500">
       
-      {/* 1. HERO SECTION (CON ICONO DE RATÓN ANIMADO) */}
-      <section className="relative h-[90vh] w-full overflow-hidden">
-        <motion.img 
-          initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 2 }}
-          src="/img/fondo.jpg" 
-          alt={tAlt('hero')} // SEO ALT DINÁMICO
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+      {/* 1. HERO SECTION */}
+      <section className="relative h-[90vh] w-full overflow-hidden bg-black">
+        {/* Envolvemos la imagen en un div para mantener tu animación de escala */}
+        <motion.div 
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2, ease: "easeOut" }}
+          className="absolute inset-0 w-full h-full"
+        >
+          <Image 
+            src="/img/fondo.jpg" 
+            alt={tAlt('hero')} 
+            fill
+            priority // Esto es lo que sube tu nota de rendimiento
+            quality={90}
+            className="object-cover"
+          />
+        </motion.div>
 
-        {/* NIEBLA SUPERIOR E INFERIOR */}
+        {/* NIEBLA SUPERIOR E INFERIOR - SE QUEDAN IGUAL */}
         <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-background via-background/20 to-transparent z-10 transition-colors duration-500" />
         <div className="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-background via-background/50 to-transparent z-10 transition-colors duration-500" />
 
-        {/* ICONO DE RATÓN ANIMADO (BOTANDO EN BUCLE) */}
+        {/* ICONO DE RATÓN ANIMADO */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3">
           <motion.div 
             initial={{ y: 0 }}
@@ -39,18 +48,18 @@ export default function HomePage() {
             }}
             className="w-6 h-10 border-2 border-foreground/30 rounded-full flex justify-center p-1"
           >
-            {/* La bolita del ratón que también se mueve */}
             <motion.div 
               animate={{ y: [0, 15, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               className="w-1 h-2 bg-[#C4A484] rounded-full"
             />
           </motion.div>
-          <span className="text-[8px] uppercase tracking-[0.4em] text-foreground/40 font-bold">Scroll</span>
+          {/* Subimos de 8px a 10px para ganar puntos de SEO/Accesibilidad */}
+          <span className="text-[10px] uppercase tracking-[0.4em] text-foreground/40 font-bold">Scroll</span>
         </div>
       </section>
 
-      {/* 2. SECCIÓN INTRO */}
+      {/* 2. SECCIÓN INTRO - SIN CAMBIOS DE DISEÑO */}
       <section className="py-24 md:py-48 px-6 max-w-6xl mx-auto w-full bg-background transition-colors duration-500">
         <div className="flex flex-col md:flex-row items-start gap-12 md:gap-32">
           
@@ -92,7 +101,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. GALERÍA ASIMÉTRICA CON EFECTO AUTO-COLOR PARA MÓVIL */}
+      {/* 3. GALERÍA ASIMÉTRICA CON OPTIMIZACIÓN DE IMAGEN */}
       <section className="pb-64 px-6 max-w-7xl mx-auto w-full bg-background transition-colors duration-500">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {[1, 2, 3].map((num) => (
@@ -102,24 +111,28 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: num * 0.2 }}
-              className={`aspect-[3/4] overflow-hidden bg-foreground/5 shadow-2xl shadow-black/5 dark:shadow-black/40 ${num === 2 ? 'md:translate-y-24' : ''} transition-all duration-500`}
+              className={`relative aspect-[3/4] overflow-hidden bg-foreground/5 shadow-2xl shadow-black/5 dark:shadow-black/40 ${num === 2 ? 'md:translate-y-24' : ''} transition-all duration-500`}
             >
-              <motion.img 
-                src={`/img/${num}.jpg`} 
-                alt={tAlt(`gallery${num}`)} // SEO ALT DINÁMICO
-                className="w-full h-full object-cover"
+              <motion.div
                 initial={{ filter: "grayscale(100%)" }}
                 whileInView={{ filter: "grayscale(0%)" }} 
-                whileHover={{ filter: "grayscale(0%)", scale: 1.1 }} 
-                viewport={{ amount: 0.5 }} 
-                transition={{ duration: 1.5, ease: "easeOut" }}
-              />
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 1.5 }}
+                className="w-full h-full"
+              >
+                <Image 
+                  src={`/img/${num}.jpg`} 
+                  alt={tAlt(`gallery${num}`)} 
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* 4. SECCIÓN NUESTROS SERVICIOS (B1, B2, B3) */}
+      {/* 4. SECCIÓN NUESTROS SERVICIOS */}
       <section id="services" className="py-32 px-6 bg-background border-t border-foreground/5 transition-colors duration-500">
         <div className="max-w-7xl mx-auto">
           
@@ -141,11 +154,12 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="flex flex-col space-y-8 group"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-foreground/5 shadow-lg">
-                <img 
+              <div className="relative aspect-[16/10] overflow-hidden bg-foreground/5 shadow-lg">
+                <Image 
                   src="/img/b1.jpg" 
-                  alt={tAlt('service_beton')} // SEO ALT
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  alt={tAlt('service_beton')} 
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="space-y-4">
@@ -168,11 +182,12 @@ export default function HomePage() {
               transition={{ delay: 0.2 }}
               className="flex flex-col space-y-8 group"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-foreground/5 shadow-lg">
-                <img 
+              <div className="relative aspect-[16/10] overflow-hidden bg-foreground/5 shadow-lg">
+                <Image 
                   src="/img/b2.jpg" 
-                  alt={tAlt('service_walls')} // SEO ALT
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  alt={tAlt('service_walls')} 
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="space-y-4">
@@ -195,11 +210,12 @@ export default function HomePage() {
               transition={{ delay: 0.4 }}
               className="flex flex-col space-y-8 group"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-foreground/5 shadow-lg">
-                <img 
+              <div className="relative aspect-[16/10] overflow-hidden bg-foreground/5 shadow-lg">
+                <Image 
                   src="/img/b3.jpg" 
-                  alt={tAlt('service_micro')} // SEO ALT
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  alt={tAlt('service_micro')} 
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="space-y-4">
