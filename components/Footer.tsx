@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Facebook, Instagram, Youtube, Twitter } from 'lucide-react'; // Importamos iconos
+import { Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -12,10 +12,10 @@ export default function Footer() {
   const cities = ["Casablanca", "Rabat", "Marrakech", "Agadir", "Tanger", "Fès", "Oujda", "Meknès", "Tétouan"];
 
   const socials = [
-    { icon: <Facebook size={16} />, href: "https://www.facebook.com/betoncireaumaroc/" },
-    { icon: <Twitter size={16} />, href: "https://x.com/rocstonesnews" },
-    { icon: <Instagram size={16} />, href: "https://www.instagram.com/beton_cire_rocstones" },
-    { icon: <Youtube size={16} />, href: "https://www.youtube.com/@rocstonesconstruction2171" },
+    { icon: <Facebook size={16} />, href: "https://www.facebook.com/betoncireaumaroc/", label: "Facebook" },
+    { icon: <Twitter size={16} />, href: "https://x.com/rocstonesnews", label: "Twitter" },
+    { icon: <Instagram size={16} />, href: "https://www.instagram.com/beton_cire_rocstones", label: "Instagram" },
+    { icon: <Youtube size={16} />, href: "https://www.youtube.com/@rocstonesconstruction2171", label: "Youtube" },
   ];
 
   return (
@@ -25,16 +25,17 @@ export default function Footer() {
           
           {/* COLUMNA 1: LOGO Y DESCRIPCIÓN */}
           <div className="space-y-8">
-            <img src="/img/logo.png" alt="RocStones" className="h-12 w-auto object-contain" />
-            <p className="text-sm text-gray-500 dark:text-gray-400 font-light leading-relaxed">
+            <img src="/img/logo.png" alt="RocStones Maroc" className="h-12 w-auto object-contain" />
+            <p className="text-sm text-gray-600 dark:text-gray-400 font-light leading-relaxed">
               {t('desc')}
             </p>
           </div>
 
           {/* COLUMNA 2: ENLACES RÁPIDOS */}
           <div className="space-y-8">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C4A484]">{t('links_title')}</h4>
-            <nav className="flex flex-col gap-4 text-sm font-light text-gray-400">
+            {/* Subimos de 10px a 12px (text-xs) y oscurecemos el dorado para contraste */}
+            <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-[#A68A6D]">{t('links_title')}</h4>
+            <nav className="flex flex-col gap-4 text-sm font-light text-gray-600 dark:text-gray-400">
               <Link href="/" className="hover:text-foreground transition-colors">{tNav('home')}</Link>
               <Link href="/services/beton-cire" className="hover:text-foreground transition-colors">{tNav('beton')}</Link>
               <Link href="/services/concrete-walls" className="hover:text-foreground transition-colors">{tNav('walls')}</Link>
@@ -46,13 +47,13 @@ export default function Footer() {
 
           {/* COLUMNA 3: ZONAS DE INTERVENCIÓN */}
           <div className="space-y-8 lg:col-span-2">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C4A484]">{t('zones_title')}</h4>
-            <p className="text-sm text-gray-500 dark:text-gray-400 font-light leading-relaxed mb-6">
+            <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-[#A68A6D]">{t('zones_title')}</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-6">
               {t('zones_list')}
             </p>
             <div className="flex flex-wrap gap-2">
               {cities.map(city => (
-                <span key={city} className="text-[9px] px-3 py-1.5 border border-foreground/5 text-gray-400 uppercase tracking-widest hover:border-[#C4A484] hover:text-[#C4A484] transition-all cursor-default">
+                <span key={city} className="text-[11px] px-3 py-1.5 border border-foreground/10 text-gray-600 dark:text-gray-400 uppercase tracking-widest hover:border-[#C4A484] hover:text-[#C4A484] transition-all cursor-default">
                   {city}
                 </span>
               ))}
@@ -62,7 +63,8 @@ export default function Footer() {
 
         {/* LÍNEA FINAL CON REDES SOCIALES REALES */}
         <div className="pt-12 border-t border-foreground/5 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-          <p className="text-[10px] text-gray-400 uppercase tracking-widest font-medium">
+          {/* Subimos de 10px a 11px */}
+          <p className="text-[11px] text-gray-600 dark:text-gray-400 uppercase tracking-widest font-medium">
             {t('rights')}
           </p>
           <div className="flex gap-6">
@@ -72,7 +74,8 @@ export default function Footer() {
                 href={social.href} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-gray-400 hover:text-[#C4A484] transition-colors duration-300"
+                aria-label={social.label} // Esto es vital para Google
+                className="text-gray-500 hover:text-[#C4A484] transition-colors duration-300"
                >
                  {social.icon}
                </a>
