@@ -33,8 +33,8 @@ export default function Footer() {
 
           {/* COLUMNA 2: ENLACES RÁPIDOS */}
           <div className="space-y-8">
-            {/* Subimos de 10px a 12px (text-xs) y oscurecemos el dorado para contraste */}
-            <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-[#A68A6D]">{t('links_title')}</h4>
+            {/* HEMOS CAMBIADO EL COLOR A #786045 PARA PASAR EL TEST DE CONTRASTE DE GOOGLE */}
+            <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-[#786045]">{t('links_title')}</h4>
             <nav className="flex flex-col gap-4 text-sm font-light text-gray-600 dark:text-gray-400">
               <Link href="/" className="hover:text-foreground transition-colors">{tNav('home')}</Link>
               <Link href="/services/beton-cire" className="hover:text-foreground transition-colors">{tNav('beton')}</Link>
@@ -47,7 +47,8 @@ export default function Footer() {
 
           {/* COLUMNA 3: ZONAS DE INTERVENCIÓN */}
           <div className="space-y-8 lg:col-span-2">
-            <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-[#A68A6D]">{t('zones_title')}</h4>
+            {/* HEMOS CAMBIADO EL COLOR A #786045 PARA PASAR EL TEST DE CONTRASTE DE GOOGLE */}
+            <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-[#786045]">{t('zones_title')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-6">
               {t('zones_list')}
             </p>
@@ -63,7 +64,6 @@ export default function Footer() {
 
         {/* LÍNEA FINAL CON REDES SOCIALES REALES */}
         <div className="pt-12 border-t border-foreground/5 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-          {/* Subimos de 10px a 11px */}
           <p className="text-[11px] text-gray-600 dark:text-gray-400 uppercase tracking-widest font-medium">
             {t('rights')}
           </p>
@@ -74,7 +74,7 @@ export default function Footer() {
                 href={social.href} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                aria-label={social.label} // Esto es vital para Google
+                aria-label={social.label}
                 className="text-gray-500 hover:text-[#C4A484] transition-colors duration-300"
                >
                  {social.icon}
