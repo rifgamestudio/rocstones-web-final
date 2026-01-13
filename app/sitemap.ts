@@ -6,7 +6,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   const sitemaps = locales.flatMap((locale) =>
     routes.map((route) => ({
-      url: `https://www.rocstones.ma/${locale}${route}`,
+      // HEMOS QUITADO LAS WWW PARA COINCIDIR CON EL LAYOUT Y EVITAR ERRORES DE SEO
+      url: `https://rocstones.ma/${locale}${route}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: route === '' ? 1 : 0.8,

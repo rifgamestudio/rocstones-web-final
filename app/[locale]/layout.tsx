@@ -16,18 +16,22 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
-    metadataBase: new URL('https://www.rocstones.ma'),
+    // 1. Unificamos la base sin "www" para evitar conflictos
+    metadataBase: new URL('https://rocstones.ma'),
+    
     title: t('title'),
     description: t('description'),
     
     // AQUÍ ESTÁ EL CÓDIGO DEL FAVICON:
     icons: {
-      icon: '/favicon.ico', // Este archivo debe estar en tu carpeta "public"
+      icon: '/favicon.ico',
     },
 
     keywords: ["beton cire maroc", "microciment maroc", "beton cire casablanca", "beton cire rabat", "beton cire marrakech", "RocStones"],
+    
     alternates: {
-      canonical: `https://www.rocstones.ma/${locale}`,
+      // 2. Usamos rutas relativas para que hereden la metadataBase correctamente
+      canonical: `/${locale}`,
       languages: {
         fr: '/fr',
         en: '/en',
@@ -46,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://www.rocstones.ma/${locale}`,
+      url: `/${locale}`,
       siteName: 'RocStones',
       images: [
         {
