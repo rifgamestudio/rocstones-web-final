@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import Image from 'next/image'; // Importación necesaria para el rendimiento
+import Image from 'next/image'; 
 
 export default function HomePage() {
   const tIntro = useTranslations('Intro');
@@ -14,7 +14,6 @@ export default function HomePage() {
       
       {/* 1. HERO SECTION */}
       <section className="relative h-[90vh] w-full overflow-hidden bg-black">
-        {/* Envolvemos la imagen en un div para mantener tu animación de escala */}
         <motion.div 
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -25,17 +24,17 @@ export default function HomePage() {
             src="/img/fondo.jpg" 
             alt={tAlt('hero')} 
             fill
-            priority // Esto es lo que sube tu nota de rendimiento
-            quality={90}
+            priority 
+            fetchPriority="high" // 1. MEJORA LCP: Prioridad máxima para Google
+            quality={85} // 2. OPTIMIZACIÓN: Ahorramos KB sin perder calidad visual
             className="object-cover"
+            sizes="100vw"
           />
         </motion.div>
 
-        {/* NIEBLA SUPERIOR E INFERIOR - SE QUEDAN IGUAL */}
         <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-background via-background/20 to-transparent z-10 transition-colors duration-500" />
         <div className="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-background via-background/50 to-transparent z-10 transition-colors duration-500" />
 
-        {/* ICONO DE RATÓN ANIMADO */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3">
           <motion.div 
             initial={{ y: 0 }}
@@ -54,12 +53,11 @@ export default function HomePage() {
               className="w-1 h-2 bg-[#C4A484] rounded-full"
             />
           </motion.div>
-          {/* Subimos de 8px a 10px para ganar puntos de SEO/Accesibilidad */}
           <span className="text-[10px] uppercase tracking-[0.4em] text-foreground/40 font-bold">Scroll</span>
         </div>
       </section>
 
-      {/* 2. SECCIÓN INTRO - SIN CAMBIOS DE DISEÑO */}
+      {/* 2. SECCIÓN INTRO */}
       <section className="py-24 md:py-48 px-6 max-w-6xl mx-auto w-full bg-background transition-colors duration-500">
         <div className="flex flex-col md:flex-row items-start gap-12 md:gap-32">
           
@@ -101,7 +99,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. GALERÍA ASIMÉTRICA CON OPTIMIZACIÓN DE IMAGEN */}
+      {/* 3. GALERÍA - OPTIMIZACIÓN DE TAMAÑOS PARA MÓVIL */}
       <section className="pb-64 px-6 max-w-7xl mx-auto w-full bg-background transition-colors duration-500">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {[1, 2, 3].map((num) => (
@@ -125,6 +123,8 @@ export default function HomePage() {
                   alt={tAlt(`gallery${num}`)} 
                   fill
                   className="object-cover"
+                  // 3. MEJORA DE TAMAÑO: Indica que en móvil usa todo el ancho y en PC un tercio
+                  sizes="(max-width: 768px) 100vw, 33vw" 
                 />
               </motion.div>
             </motion.div>
@@ -160,6 +160,7 @@ export default function HomePage() {
                   alt={tAlt('service_beton')} 
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="space-y-4">
@@ -188,6 +189,7 @@ export default function HomePage() {
                   alt={tAlt('service_walls')} 
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="space-y-4">
@@ -216,6 +218,7 @@ export default function HomePage() {
                   alt={tAlt('service_micro')} 
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="space-y-4">

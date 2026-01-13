@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Sun, Moon, ChevronDown } from 'lucide-react'; 
 import { useTheme } from 'next-themes';   
+import Image from 'next/image'; // 1. Añadimos la importación de Next Image
 
 export default function Header() {
   const t = useTranslations('Navbar');
@@ -38,19 +39,10 @@ export default function Header() {
     return segments.join("/");
   };
 
-  // Definición de los sub-servicios
   const serviceItems = [
     { name: t('beton'), href: '/services/beton-cire' },
     { name: t('walls'), href: '/services/concrete-walls' },
     { name: t('micro'), href: '/services/micro-ciment' },
-  ];
-
-  const navLinks = [
-    { name: t('home'), href: '/' },
-    { name: t('services'), href: '#services' },
-    { name: t('realisations'), href: '/realisations' }, 
-    { name: t('pros'), href: '/professionnels' }, 
-    { name: t('contact'), href: '/contact' },
   ];
 
   const menuVariants: Variants = {
@@ -85,15 +77,19 @@ export default function Header() {
       <header className="fixed top-0 w-full z-[100] bg-white/90 dark:bg-[#121212]/90 backdrop-blur-xl border-b border-gray-200 dark:border-white/10 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
           
-          {/* LOGO */}
+          {/* LOGO OPTIMIZADO PARA 100/100 */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-2 md:gap-4 shrink-0 relative z-[110]"
           >
-            <img 
+            {/* 2. Cambiamos img por Image con medidas explícitas para evitar el error de Google */}
+            <Image 
               src="/img/logo.png" 
-              alt="RocStones" 
+              alt="RocStones Maroc" 
+              width={200} // Medida base para el cálculo de Google
+              height={80} // Medida base para el cálculo de Google
+              priority // Carga inmediata del logo
               className="h-10 md:h-16 w-auto object-contain transition-transform hover:scale-105 duration-500" 
             />
             <div className="h-6 md:h-8 w-[1px] bg-gray-200 dark:bg-white/20 mx-1 md:mx-2 hidden xs:block" />
@@ -190,7 +186,6 @@ export default function Header() {
               ))}
             </div>
 
-            {/* BOTÓN BURGER MÓVIL - HEMOS AÑADIDO EL ARIA-LABEL PARA EL 100% DE SEO */}
             <button 
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden flex flex-col gap-1.5 justify-center items-center w-8 h-8 focus:outline-none"
