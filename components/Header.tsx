@@ -48,9 +48,9 @@ export default function Header() {
   const navLinks = [
     { name: t('home'), href: '/' },
     { name: t('services'), href: '#services' },
-    { name: t('realisations'), href: '/realisations' }, // AÑADIDO A LA ESTRUCTURA
+    { name: t('realisations'), href: '/realisations' }, 
     { name: t('pros'), href: '/professionnels' }, 
-    { name: t('contact'), href: '/contact' }, // URL CORREGIDA DE #contact A /contact
+    { name: t('contact'), href: '/contact' },
   ];
 
   const menuVariants: Variants = {
@@ -82,11 +82,10 @@ export default function Header() {
 
   return (
     <>
-      {/* Header con fondo más sólido en modo claro para evitar el efecto grisáceo */}
       <header className="fixed top-0 w-full z-[100] bg-white/90 dark:bg-[#121212]/90 backdrop-blur-xl border-b border-gray-200 dark:border-white/10 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
           
-          {/* LOGO (Color original preservado siempre) */}
+          {/* LOGO */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -110,7 +109,6 @@ export default function Header() {
               <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-black dark:bg-white transition-all group-hover:w-full" />
             </Link>
 
-            {/* ITEM NOS SERVICES CON DROPDOWN */}
             <div 
               className="relative h-24 flex items-center"
               onMouseEnter={() => setIsServicesHovered(true)}
@@ -144,7 +142,6 @@ export default function Header() {
               </AnimatePresence>
             </div>
 
-            {/* ENLACE RÉALISATIONS AÑADIDO */}
             <Link href="/realisations" className="hover:text-black dark:hover:text-white transition-all relative group text-center">
               {t('realisations')}
               <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-black dark:bg-white transition-all group-hover:w-full" />
@@ -163,7 +160,6 @@ export default function Header() {
           {/* SELECTOR IDIOMAS + MODO OSCURO */}
           <div className="flex items-center gap-6 relative z-[110]">
             
-            {/* BOTÓN MODO OSCURO */}
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors duration-300"
@@ -178,7 +174,6 @@ export default function Header() {
               </motion.div>
             </button>
 
-            {/* IDIOMAS */}
             <div className="hidden sm:flex items-center gap-4 text-[10px] font-black uppercase tracking-widest">
               {['fr', 'en', 'es', 'de', 'nl'].map((lang) => (
                 <Link 
@@ -195,10 +190,11 @@ export default function Header() {
               ))}
             </div>
 
-            {/* BOTÓN BURGER PARA MÓVIL */}
+            {/* BOTÓN BURGER MÓVIL - HEMOS AÑADIDO EL ARIA-LABEL PARA EL 100% DE SEO */}
             <button 
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden flex flex-col gap-1.5 justify-center items-center w-8 h-8 focus:outline-none"
+              aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
             >
               <motion.span 
                 animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
@@ -217,7 +213,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* MENÚ MÓVIL FULL SCREEN */}
+      {/* MENÚ MÓVIL */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -232,7 +228,6 @@ export default function Header() {
                 <Link href="/" onClick={() => setIsOpen(false)} className="text-4xl font-serif italic text-black dark:text-white">{t('home')}</Link>
               </motion.div>
 
-              {/* ACORDEÓN SERVICIOS MÓVIL */}
               <motion.div variants={linkVariants} custom={1} className="flex flex-col gap-4">
                 <button 
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
@@ -258,7 +253,6 @@ export default function Header() {
                 </AnimatePresence>
               </motion.div>
 
-              {/* RÉALISATIONS MÓVIL */}
               <motion.div variants={linkVariants} custom={2}>
                 <Link href="/realisations" onClick={() => setIsOpen(false)} className="text-4xl font-serif italic text-black dark:text-white">{t('realisations')}</Link>
               </motion.div>
@@ -271,7 +265,6 @@ export default function Header() {
               </motion.div>
             </nav>
 
-            {/* IDIOMAS EN EL MENÚ MÓVIL */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
