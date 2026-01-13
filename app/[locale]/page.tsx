@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 export default function HomePage() {
   const tIntro = useTranslations('Intro');
   const tExpertise = useTranslations('Expertise');
+  const tAlt = useTranslations('ImagesAlt'); // Inyectamos la traducción para SEO
 
   return (
     <main className="flex flex-col w-full bg-background text-foreground transition-colors duration-500">
@@ -17,7 +18,7 @@ export default function HomePage() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 2 }}
           src="/img/fondo.jpg" 
-          alt="RocStones Luxury Interior"
+          alt={tAlt('hero')} // SEO ALT DINÁMICO
           className="absolute inset-0 w-full h-full object-cover"
         />
 
@@ -103,15 +104,14 @@ export default function HomePage() {
               transition={{ delay: num * 0.2 }}
               className={`aspect-[3/4] overflow-hidden bg-foreground/5 shadow-2xl shadow-black/5 dark:shadow-black/40 ${num === 2 ? 'md:translate-y-24' : ''} transition-all duration-500`}
             >
-              {/* MODIFICACIÓN AQUÍ: motion.img para activar color al hacer scroll en móvil */}
               <motion.img 
                 src={`/img/${num}.jpg`} 
-                alt="Gallery" 
+                alt={tAlt(`gallery${num}`)} // SEO ALT DINÁMICO
                 className="w-full h-full object-cover"
                 initial={{ filter: "grayscale(100%)" }}
-                whileInView={{ filter: "grayscale(0%)" }} // Se activa al entrar en el scroll del móvil
-                whileHover={{ filter: "grayscale(0%)", scale: 1.1 }} // Efecto hover para escritorio
-                viewport={{ amount: 0.5 }} // Se activa cuando el 50% de la imagen es visible
+                whileInView={{ filter: "grayscale(0%)" }} 
+                whileHover={{ filter: "grayscale(0%)", scale: 1.1 }} 
+                viewport={{ amount: 0.5 }} 
                 transition={{ duration: 1.5, ease: "easeOut" }}
               />
             </motion.div>
@@ -144,7 +144,7 @@ export default function HomePage() {
               <div className="aspect-[16/10] overflow-hidden bg-foreground/5 shadow-lg">
                 <img 
                   src="/img/b1.jpg" 
-                  alt="Béton Ciré" 
+                  alt={tAlt('service_beton')} // SEO ALT
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
@@ -171,7 +171,7 @@ export default function HomePage() {
               <div className="aspect-[16/10] overflow-hidden bg-foreground/5 shadow-lg">
                 <img 
                   src="/img/b2.jpg" 
-                  alt="Concrete Walls" 
+                  alt={tAlt('service_walls')} // SEO ALT
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
@@ -198,7 +198,7 @@ export default function HomePage() {
               <div className="aspect-[16/10] overflow-hidden bg-foreground/5 shadow-lg">
                 <img 
                   src="/img/b3.jpg" 
-                  alt="Micro-ciment" 
+                  alt={tAlt('service_micro')} // SEO ALT
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>

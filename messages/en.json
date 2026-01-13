@@ -147,6 +147,19 @@
     "rights": "© 2026 ROCSTONES MAROC. All rights reserved.",
     "social_title": "Follow us"
   },
+  "Metadata": {
+    "title": "Béton Ciré Morocco | Micro-cement & Design Experts | RocStones",
+    "description": "Leading provider of béton ciré in Morocco. Professional micro-cement application for floors, walls, and furniture in Casablanca, Rabat, and Marrakech. Premium quality."
+  },
+  "ImagesAlt": {
+  "hero": "Luxury interior design with waxed concrete in Morocco - RocStones",
+  "gallery1": "Modern living room with mineral micro-cement floor",
+  "gallery2": "Contemporary architectural concrete wall texture",
+  "gallery3": "High-precision micro-cement finish for villas",
+  "service_beton": "Expert in waxed concrete application in Casablanca",
+  "service_walls": "Architectural concrete walls and decorative finishes",
+  "service_micro": "High-performance micro-cement surface renovation"
+},
   "Common": {
     "renovation_title": "Precision Renovation",
     "renovation_subtitle": "Transform without demolishing.",

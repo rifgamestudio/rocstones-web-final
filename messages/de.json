@@ -147,6 +147,19 @@
     "rights": "© 2026 ROCSTONES MAROKKO. Alle Rechte vorbehalten.",
     "social_title": "Folgen Sie uns"
   },
+  "Metadata": {
+    "title": "Béton Ciré Marokko | Experten für Mikrozement & Design | RocStones",
+    "description": "Marktführer für Béton Ciré in Marokko. Professionelle Mikrozement-Verlegung für Böden, Wände und Möbel in Casablanca, Rabat und Marrakesch. Premium Qualität."
+  },
+  "ImagesAlt": {
+  "hero": "Luxuriöses Innendesign mit Béton Ciré in Marokko - RocStones",
+  "gallery1": "Modernes Wohnzimmer mit mineralischem Mikrozementboden",
+  "gallery2": "Zeitgenössische architektonische Betonwandtextur",
+  "gallery3": "Hochpräzises Mikrozement-Finish für Villen",
+  "service_beton": "Experte für die Anwendung von Béton Ciré in Casablanca",
+  "service_walls": "Architektonische Betonwände und dekorative Oberflächen",
+  "service_micro": "Hochleistungs-Mikrozement-Oberflächenrenovierung"
+},
   "Common": {
     "renovation_title": "Präzisionsrenovierung",
     "renovation_subtitle": "Verwandeln ohne Abriss.",

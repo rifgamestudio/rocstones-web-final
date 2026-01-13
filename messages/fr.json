@@ -154,6 +154,19 @@
     "ramadan_kareem": "Ramadan Mubarak",
     "mouse_scroll": "Scroll"
   },
+  "Metadata": {
+    "title": "Béton Ciré Marruecos | Expertos en Microcemento | RocStones",
+    "description": "Líder en béton ciré en Marruecos. Aplicación profesional de microcemento para suelos y paredes en Casablanca, Rabat y Marrakech. Calidad premium."
+  },
+  "ImagesAlt": {
+  "hero": "Design intérieur de luxe avec béton ciré au Maroc - RocStones",
+  "gallery1": "Salon moderne avec sol en béton ciré minéral",
+  "gallery2": "Texture murale en béton architectural contemporain",
+  "gallery3": "Finition micro-ciment de haute précision pour villa",
+  "service_beton": "Expert en application de béton ciré à Casablanca",
+  "service_walls": "Murs en béton architectural et finitions décoratives",
+  "service_micro": "Rénovation de surfaces en micro-ciment haute performance"
+},
   "RealisationsPage": {
     "title": "NOS RÉALISATIONS",
     "subtitle": "Une collection de projets où l'artisanat rencontre l'architecture contemporaine.",

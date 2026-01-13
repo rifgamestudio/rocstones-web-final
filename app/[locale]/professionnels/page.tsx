@@ -110,7 +110,7 @@ export default function ProfessionalsPage() {
         </div>
       </section>
 
-      {/* SECCIÓN CTAS FINALES (SECTORES Y CONTACTO) CON IMÁGENES ACTUALIZADAS */}
+      {/* SECCIÓN CTAS FINALES (SECTORES Y CONTACTO) CON AUTO-COLOR EN SCROLL */}
       <section className="py-20 px-6 bg-foreground/[0.02]">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-2xl font-serif italic mb-16 text-center">{t('sectors_title')}</h3>
@@ -123,10 +123,16 @@ export default function ProfessionalsPage() {
             ].map((sector) => (
               <div key={sector.id} className="flex flex-col items-center text-center space-y-4">
                 <div className="w-full aspect-square bg-background border border-foreground/5 shadow-sm overflow-hidden group">
-                   <img 
+                   {/* MODIFICACIÓN: motion.img para activar color al hacer scroll en móvil */}
+                   <motion.img 
                     src={`/img/${sector.img}`} 
                     alt={sector.id} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
+                    initial={{ filter: "grayscale(100%)" }}
+                    whileInView={{ filter: "grayscale(0%)" }} // Color automático en móvil
+                    whileHover={{ filter: "grayscale(0%)", scale: 1.1 }} // Efecto hover en PC
+                    viewport={{ amount: 0.5 }} // Se activa al ver el 50% de la imagen
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    className="w-full h-full object-cover transition-all"
                     onError={(e) => { e.currentTarget.src = "https://placehold.co/600x600?text=" + sector.id }} 
                    />
                 </div>
@@ -143,7 +149,6 @@ export default function ProfessionalsPage() {
           <h3 className="text-3xl md:text-5xl font-serif italic">{t('support_title')}</h3>
           <p className="text-gray-500 font-light leading-relaxed text-lg italic">{t('support_desc')}</p>
           <div className="pt-10">
-            {/* Cambiado button por Link para que sea funcional */}
             <Link 
               href="/contact" 
               className="inline-block bg-foreground text-background px-12 py-5 text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-[#C4A484] hover:text-white transition-all duration-500 rounded-full shadow-lg"
