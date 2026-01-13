@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
+import Image from 'next/image'; // 1. Importación necesaria para optimizar el logo
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -25,7 +26,14 @@ export default function Footer() {
           
           {/* COLUMNA 1: LOGO Y DESCRIPCIÓN */}
           <div className="space-y-8">
-            <img src="/img/logo.png" alt="RocStones Maroc" className="h-12 w-auto object-contain" />
+            {/* 2. Cambiamos img por Image con medidas explícitas para el 100/100 de Google */}
+            <Image 
+              src="/img/logo.png" 
+              alt="RocStones Maroc" 
+              width={180} // Medida proporcional al diseño
+              height={48}  // Equivale a h-12 para que no cambie nada visualmente
+              className="h-12 w-auto object-contain" 
+            />
             <p className="text-sm text-gray-600 dark:text-gray-400 font-light leading-relaxed">
               {t('desc')}
             </p>
@@ -33,7 +41,6 @@ export default function Footer() {
 
           {/* COLUMNA 2: ENLACES RÁPIDOS */}
           <div className="space-y-8">
-            {/* HEMOS CAMBIADO EL COLOR A #786045 PARA PASAR EL TEST DE CONTRASTE DE GOOGLE */}
             <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-[#786045]">{t('links_title')}</h4>
             <nav className="flex flex-col gap-4 text-sm font-light text-gray-600 dark:text-gray-400">
               <Link href="/" className="hover:text-foreground transition-colors">{tNav('home')}</Link>
@@ -47,7 +54,6 @@ export default function Footer() {
 
           {/* COLUMNA 3: ZONAS DE INTERVENCIÓN */}
           <div className="space-y-8 lg:col-span-2">
-            {/* HEMOS CAMBIADO EL COLOR A #786045 PARA PASAR EL TEST DE CONTRASTE DE GOOGLE */}
             <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-[#786045]">{t('zones_title')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-6">
               {t('zones_list')}

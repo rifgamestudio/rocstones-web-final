@@ -25,8 +25,8 @@ export default function HomePage() {
             alt={tAlt('hero')} 
             fill
             priority 
-            fetchPriority="high" // 1. MEJORA LCP: Prioridad máxima para Google
-            quality={85} // 2. OPTIMIZACIÓN: Ahorramos KB sin perder calidad visual
+            fetchPriority="high"
+            quality={80} // Optimización de peso para LCP
             className="object-cover"
             sizes="100vw"
           />
@@ -99,7 +99,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. GALERÍA - OPTIMIZACIÓN DE TAMAÑOS PARA MÓVIL */}
+      {/* 3. GALERÍA - OPTIMIZACIÓN AGRESIVA PARA EL 100/100 */}
       <section className="pb-64 px-6 max-w-7xl mx-auto w-full bg-background transition-colors duration-500">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {[1, 2, 3].map((num) => (
@@ -123,8 +123,9 @@ export default function HomePage() {
                   alt={tAlt(`gallery${num}`)} 
                   fill
                   className="object-cover"
-                  // 3. MEJORA DE TAMAÑO: Indica que en móvil usa todo el ancho y en PC un tercio
-                  sizes="(max-width: 768px) 100vw, 33vw" 
+                  // Ajustamos sizes para que en móvil (con padding) no pida una imagen de más de 400px
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw" 
+                  quality={75} // El estándar para optimización SEO máxima
                 />
               </motion.div>
             </motion.div>
@@ -160,7 +161,8 @@ export default function HomePage() {
                   alt={tAlt('service_beton')} 
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+                  quality={75}
                 />
               </div>
               <div className="space-y-4">
@@ -189,7 +191,8 @@ export default function HomePage() {
                   alt={tAlt('service_walls')} 
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+                  quality={75}
                 />
               </div>
               <div className="space-y-4">
@@ -218,7 +221,8 @@ export default function HomePage() {
                   alt={tAlt('service_micro')} 
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+                  quality={75}
                 />
               </div>
               <div className="space-y-4">
