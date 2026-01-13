@@ -91,7 +91,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. GALERÍA ASIMÉTRICA */}
+      {/* 3. GALERÍA ASIMÉTRICA CON EFECTO AUTO-COLOR PARA MÓVIL */}
       <section className="pb-64 px-6 max-w-7xl mx-auto w-full bg-background transition-colors duration-500">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {[1, 2, 3].map((num) => (
@@ -103,10 +103,16 @@ export default function HomePage() {
               transition={{ delay: num * 0.2 }}
               className={`aspect-[3/4] overflow-hidden bg-foreground/5 shadow-2xl shadow-black/5 dark:shadow-black/40 ${num === 2 ? 'md:translate-y-24' : ''} transition-all duration-500`}
             >
-              <img 
+              {/* MODIFICACIÓN AQUÍ: motion.img para activar color al hacer scroll en móvil */}
+              <motion.img 
                 src={`/img/${num}.jpg`} 
                 alt="Gallery" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-[3s] ease-out hover:scale-110" 
+                className="w-full h-full object-cover"
+                initial={{ filter: "grayscale(100%)" }}
+                whileInView={{ filter: "grayscale(0%)" }} // Se activa al entrar en el scroll del móvil
+                whileHover={{ filter: "grayscale(0%)", scale: 1.1 }} // Efecto hover para escritorio
+                viewport={{ amount: 0.5 }} // Se activa cuando el 50% de la imagen es visible
+                transition={{ duration: 1.5, ease: "easeOut" }}
               />
             </motion.div>
           ))}
