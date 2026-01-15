@@ -16,7 +16,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
+    // Unificamos la base sin "www" para evitar conflictos de SEO
     metadataBase: new URL('https://rocstones.ma'),
+    
     title: t('title'),
     description: t('description'),
     icons: {
@@ -56,6 +58,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale: locale,
       type: 'website',
     },
+    // AÑADIDO: Metadatos para Twitter/X para mejorar el diseño al compartir
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: ['/og-image.jpg'],
+    },
   };
 }
 
@@ -73,7 +82,7 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
-  // --- CONFIGURACIÓN DE DATOS ESTRUCTURADOS PARA MEJORAR CTR ---
+  // --- CONFIGURACIÓN DE DATOS ESTRUCTURADOS (JSON-LD) MEJORADA ---
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -81,7 +90,9 @@ export default async function LocaleLayout({
     "image": "https://rocstones.ma/og-image.jpg",
     "@id": "https://rocstones.ma",
     "url": "https://rocstones.ma",
-    "telephone": "+212663601270", // Tu teléfono detectado en Google Maps
+    "telephone": "+212663601270",
+    "priceRange": "$$$", // Indica categoría de lujo/premium
+    "areaServed": "Morocco", // Indica cobertura nacional
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Rue Ibn Batouta",
@@ -102,7 +113,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${inter.variable} ${basker.variable} antialiased font-sans`}>
-        {/* Inyectamos el JSON-LD aquí para que Google lo lea de inmediato */}
+        {/* Inyectamos el JSON-LD optimizado */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
