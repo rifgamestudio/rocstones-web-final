@@ -16,21 +16,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
-    // 1. Unificamos la base sin "www" para evitar conflictos
     metadataBase: new URL('https://rocstones.ma'),
-    
     title: t('title'),
     description: t('description'),
-    
-    // AQUÍ ESTÁ EL CÓDIGO DEL FAVICON:
     icons: {
       icon: '/favicon.ico',
     },
-
     keywords: ["beton cire maroc", "microciment maroc", "beton cire casablanca", "beton cire rabat", "beton cire marrakech", "RocStones"],
-    
     alternates: {
-      // 2. Usamos rutas relativas para que hereden la metadataBase correctamente
       canonical: `/${locale}`,
       languages: {
         fr: '/fr',
@@ -65,7 +58,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
   };
 }
-// ------------------------------
 
 export default async function LocaleLayout({
   children,
@@ -81,9 +73,40 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
+  // --- CONFIGURACIÓN DE DATOS ESTRUCTURADOS PARA MEJORAR CTR ---
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "RocStones Maroc",
+    "image": "https://rocstones.ma/og-image.jpg",
+    "@id": "https://rocstones.ma",
+    "url": "https://rocstones.ma",
+    "telephone": "+212663601270", // Tu teléfono detectado en Google Maps
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue Ibn Batouta",
+      "addressLocality": "Casablanca",
+      "addressCountry": "MA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.5731,
+      "longitude": -7.5898
+    },
+    "sameAs": [
+      "https://www.facebook.com/betoncireaumaroc/",
+      "https://www.instagram.com/beton_cire_rocstones"
+    ]
+  };
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${inter.variable} ${basker.variable} antialiased font-sans`}>
+        {/* Inyectamos el JSON-LD aquí para que Google lo lea de inmediato */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <NextIntlClientProvider messages={messages}>
             <Header />
