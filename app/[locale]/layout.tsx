@@ -45,25 +45,24 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `/${locale}`,
+      url: `https://rocstones.ma/${locale}`,
       siteName: 'RocStones',
       images: [
         {
-          url: '/og-image.jpg', 
+          url: 'https://rocstones.ma/og-image.jpg', // URL absoluta para evitar errores en redes sociales
           width: 1200,
           height: 630,
-          alt: 'RocStones - Béton Ciré & Terrazzo Maroc',
+          alt: 'RocStones - Béton Ciré & Microciment Maroc', // CORREGIDO: Eliminado Terrazzo
         },
       ],
       locale: locale,
       type: 'website',
     },
-    // AÑADIDO: Metadatos para Twitter/X para mejorar el diseño al compartir
     twitter: {
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
-      images: ['/og-image.jpg'],
+      images: ['https://rocstones.ma/og-image.jpg'], // URL absoluta para Twitter/X
     },
   };
 }
