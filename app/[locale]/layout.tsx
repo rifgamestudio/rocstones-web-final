@@ -4,6 +4,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import CookieBanner from "../../components/CookieBanner"; // AÑADIDO: Importación del banner
 import { Inter, Baskervville } from 'next/font/google';
 import { ThemeProvider } from "next-themes";
 
@@ -121,6 +122,7 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             <Header />
             {children}
+            <CookieBanner /> {/* AÑADIDO: El banner aparece aquí globalmente */}
             <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>

@@ -41,6 +41,7 @@ export default function Footer() {
 
           {/* COLUMNA 2: ENLACES RÁPIDOS */}
           <div className="space-y-8">
+            {/* HEMOS CAMBIADO EL COLOR A #786045 PARA PASAR EL TEST DE CONTRASTE DE GOOGLE */}
             <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-[#786045]">{t('links_title')}</h4>
             <nav className="flex flex-col gap-4 text-sm font-light text-gray-600 dark:text-gray-400">
               <Link href="/" className="hover:text-foreground transition-colors">{tNav('home')}</Link>
@@ -54,6 +55,7 @@ export default function Footer() {
 
           {/* COLUMNA 3: ZONAS DE INTERVENCIÓN */}
           <div className="space-y-8 lg:col-span-2">
+            {/* HEMOS CAMBIADO EL COLOR A #786045 PARA PASAR EL TEST DE CONTRASTE DE GOOGLE */}
             <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-[#786045]">{t('zones_title')}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-6">
               {t('zones_list')}
@@ -68,11 +70,22 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* LÍNEA FINAL CON REDES SOCIALES REALES */}
-        <div className="pt-12 border-t border-foreground/5 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-          <p className="text-[11px] text-gray-600 dark:text-gray-400 uppercase tracking-widest font-medium">
-            {t('rights')}
-          </p>
+        {/* LÍNEA FINAL CON REDES SOCIALES Y ENLACES LEGALES */}
+        <div className="pt-12 border-t border-foreground/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+          
+          <div className="flex flex-col gap-4">
+            <p className="text-[11px] text-gray-600 dark:text-gray-400 uppercase tracking-widest font-medium">
+              {t('rights')}
+            </p>
+            
+            {/* NUEVOS ENLACES LEGALES EN FRANCÉS */}
+            <div className="flex flex-wrap justify-center md:justify-start gap-6 opacity-60">
+              <Link href="/mentions-legales" className="text-[9px] uppercase tracking-widest hover:text-[#786045] transition-colors">Mentions Légales</Link>
+              <Link href="/confidentialite" className="text-[9px] uppercase tracking-widest hover:text-[#786045] transition-colors">Confidentialité</Link>
+              <Link href="/cookies" className="text-[9px] uppercase tracking-widest hover:text-[#786045] transition-colors">Cookies</Link>
+            </div>
+          </div>
+
           <div className="flex gap-6">
              {socials.map((social, idx) => (
                <a 

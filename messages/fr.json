@@ -185,5 +185,37 @@
       "p6": { "name": "Boutique", "loc": "Casablanca", "type": "Commercial" },
       "p7": { "name": "The Cliff Beauty Bar", "loc": "Casablanca", "type": "Commercial" }
     }
-  }
+  },
+"Legal": {
+  "back": "Retour à l'accueil",
+  "mentions_title": "Mentions Légales",
+  "privacy_title": "Politique de Confidentialité",
+  "cookies_title": "Cookies et Données Personnelles",
+  "cookie_banner_message": "Nous utilisons des cookies pour améliorer votre expérience et analyser notre trafic conformément à la réglementation marocaine.",
+  "accept_button": "Accepter",
+  "id_subtitle": "1. Informations Légales",
+  "id_content": "En vertu de l'article 6 de la Loi n° 34-05 relative à l'échange électronique de données juridiques, il est précisé aux utilisateurs du site rocstones.ma l'identité de l'éditeur et de l'entreprise :",
+  "company_name": "Raison Sociale : RocStones Construction (S.A.R.L)",
+  "company_details": "ICE : 002079078000055 | R.C : 2581 (Al Hoceima) | I.F : 25243867 | T.P : 56529446 | CNSS : 5758414",
+  "company_address": "Siège Social : Al Hoceima, Maroc",
+  "company_phone": "Téléphone : +212 (0) 539 984 355",
+  "company_email": "Email : info@rocstones.ma",
+  "usage_subtitle": "2. Conditions Générales d'Utilisation",
+  "usage_content": "L'utilisation du site rocstones.ma implique l'acceptation pleine et entière des conditions générales d'utilisation. RocStones Construction ne puede être tenu responsable des dommages directs ou indirects causés au matériel de l'utilisateur lors de l'accès au site. Les contenus sont fournis à titre informatif et ne constituent pas un conseil juridique ou technique. RocStones Construction se réserve le droit de modifier le contenido du site à tout moment sans préavis.",
+  "ip_subtitle": "3. Propriété Intellectuelle",
+  "ip_content": "RocStones Construction est propriétaire des droits de propriété intellectuelle sur tous les éléments accessibles sur le site (textes, images, graphismes, logo, icônes). Toute reproduction, représentation, modification ou adaptation de tout ou partie des éléments du site est strictement interdite sans autorisation écrite préalable. Toute exploitation non autorisée sera considérée comme constitutive d’une contrefaçon conformément aux lois marocaines.",
+  "hosting_subtitle": "4. Hébergement",
+  "hosting_content": "Le site est hébergé par Vercel Inc., 340 S Lemon Ave #1142 Walnut, CA 91789, USA. L'hébergeur assure la disponibilité technique du service.",
+  "jurisdiction_subtitle": "5. Droit Applicable",
+  "jurisdiction_content": "Tout litige en relation avec l’utilisation du site rocstones.ma est soumis au droit marocain. Il est fait attribution exclusive de juridiction aux tribunaux compétents de Al Hoceima ou Casablanca.",
+  "treatment_subtitle": "1. Traitement des Données (Loi 09-08)",
+  "treatment_content": "Conformément à la Loi n° 09-08, RocStones Construction traite vos données avec la plus stricte confidentialité. Les informations collectées via nos formulaires sont destinées exclusivement à la gestion de vos demandes de devis et à la relation client. Les échanges sont conservés pour l'historisation de la relation commerciale et sont détruits ou archivés selon les délais légaux.",
+  "rights_subtitle": "2. Vos Droits",
+  "rights_content": "Vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition au traitement de vos données personnelles. Pour exercer ces droits, contactez-nous à info@rocstones.ma. En cas de litige, vous pouvez saisir la CNDP (Commission Nationale de contrôle de la protection des Données à caractère personnel).",
+  "cookies_def_subtitle": "1. Définition des Cookies",
+  "cookies_def_content": "Un cookie est un petit fichier texte stocké sur votre terminal. Il enregistre des informations relatives à votre navigation (pages consultées, date, heure) pour faciliter vos prochaines visites et mesurer l'audience du site via Google Analytics.",
+  "cookies_manage_subtitle": "2. Gestion et Consentement",
+  "claims": "En cas de litige ou pour toute question relative à la protection de vos données, vous pouvez introduire une réclamation auprès de la CNDP (Commission Nationale de contrôle de la protection des Données à caractère personnel).",
+  "cookies_manage_content": "La poursuite de la navigation sur le site vaut accord pour le dépôt de cookies. Vous pouvez configurer votre navigateur pour refuser l'installation des cookies. Notez que le refus peut limiter l'accès à certaines fonctionnalités du site."
+}
 }
