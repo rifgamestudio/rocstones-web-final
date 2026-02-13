@@ -1,12 +1,24 @@
 import { MetadataRoute } from 'next'
-
+ 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
-      allow: '/',
-      disallow: '/private/', // Si tienes alguna zona de admin
+      allow: [
+        '/',
+        '/fr',
+        '/es',
+        '/en',
+        '/de',
+        '/nl',
+        '/img/',
+      ],
+      disallow: [
+        '/*?*',      // BLOQUEA todas las URLs con parámetros (la basura de WordPress)
+        '/private/',
+        '/cgi-bin/',
+      ],
     },
-    sitemap: 'https://www.rocstones.ma/sitemap.xml',
+    sitemap: 'https://rocstones.ma/sitemap.xml',
   }
 }
