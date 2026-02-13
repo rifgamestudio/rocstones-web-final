@@ -4,30 +4,29 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import CookieBanner from "../../components/CookieBanner"; // AÑADIDO: Importación del banner
+import CookieBanner from "../../components/CookieBanner"; 
 import { Inter, Baskervville } from 'next/font/google';
 import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const basker = Baskervville({ weight: '400', subsets: ['latin'], style: 'italic', variable: '--font-serif' });
 
-// --- BLOQUE SEO PARA GOOGLE, REDES SOCIALES Y FAVICON ---
+// --- BLOQUE SEO OPTIMIZADO PARA GOOGLE ---
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
-    // Unificamos la base sin "www" para evitar conflictos de SEO
     metadataBase: new URL('https://rocstones.ma'),
-    
     title: t('title'),
     description: t('description'),
     icons: {
       icon: '/favicon.ico',
     },
     keywords: ["beton cire maroc", "microciment maroc", "beton cire casablanca", "beton cire rabat", "beton cire marrakech", "RocStones"],
+    
+    // CORRECCIÓN: Eliminamos 'canonical' fijo para evitar el error de "Página duplicada"
     alternates: {
-      canonical: `/${locale}`,
       languages: {
         fr: '/fr',
         en: '/en',
@@ -46,14 +45,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://rocstones.ma/${locale}`,
       siteName: 'RocStones',
       images: [
         {
-          url: 'https://rocstones.ma/og-image.jpg', // URL absoluta para evitar errores en redes sociales
+          url: 'https://rocstones.ma/og-image.jpg', 
           width: 1200,
           height: 630,
-          alt: 'RocStones - Béton Ciré & Microciment Maroc', // CORREGIDO: Eliminado Terrazzo
+          alt: 'RocStones - Béton Ciré & Microciment Maroc',
         },
       ],
       locale: locale,
@@ -61,9 +59,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
-      images: ['https://rocstones.ma/og-image.jpg'], // URL absoluta para Twitter/X
+      images: ['https://rocstones.ma/og-image.jpg'],
     },
   };
 }
@@ -82,27 +78,22 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
-  // --- CONFIGURACIÓN DE DATOS ESTRUCTURADOS (JSON-LD) MEJORADA ---
+  // --- DATOS ESTRUCTURADOS ACTUALIZADOS (RocStones Construction) ---
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "RocStones Maroc",
+    "name": "RocStones Construction",
     "image": "https://rocstones.ma/og-image.jpg",
     "@id": "https://rocstones.ma",
     "url": "https://rocstones.ma",
     "telephone": "+212663601270",
-    "priceRange": "$$$", // Indica categoría de lujo/premium
-    "areaServed": "Morocco", // Indica cobertura nacional
+    "priceRange": "$$$",
+    "areaServed": "Morocco",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Rue Ibn Batouta",
       "addressLocality": "Casablanca",
       "addressCountry": "MA"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 33.5731,
-      "longitude": -7.5898
     },
     "sameAs": [
       "https://www.facebook.com/betoncireaumaroc/",
@@ -113,7 +104,6 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${inter.variable} ${basker.variable} antialiased font-sans`}>
-        {/* Inyectamos el JSON-LD optimizado */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -122,7 +112,7 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             <Header />
             {children}
-            <CookieBanner /> {/* AÑADIDO: El banner aparece aquí globalmente */}
+            <CookieBanner />
             <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>
